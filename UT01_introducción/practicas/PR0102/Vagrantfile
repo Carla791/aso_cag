@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.define "wnd10" do |m1|
+  config.vm.box = "gusztavvargadr/windows-10"
+  - config.vm.provider "virtualbox" do |vb|
+    - vb.name =" wind10"
+    - vb.memory = 2048
+    - vb.cpus= 2
+  end
+  config.vm.define "wind-server19" do |m2|
+  config.vm.box = "gusztavvargadr/windows-server-2019-standard"
+  - config.vm.provider "virtualbox" do |vb|
+    - vb.name =" server19"
+    - vb.memory = 4096
+    - vb.cpus= 4
+  end
+end
+
+
