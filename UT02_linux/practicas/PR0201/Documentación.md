@@ -174,7 +174,7 @@
      - ls  -s -l 
 <!--El comando chmod modifica los permisos del directorio "+t" establece el Sticky Bit--> 
 <!--  4 drwxrwxrwt   2 root root       4096 Oct  3 11:22 compartido-->  
-1. Vuelve a iniciar sesión con el primer usuario, crea un fichero e intenta eliminarlo con el segundo usuario.
+5. Vuelve a iniciar sesión con el primer usuario, crea un fichero e intenta eliminarlo con el segundo usuario.
     - Comandos:
       - su cag1(1234)
       - cd /compartido
@@ -185,7 +185,7 @@
 <!-- El comando su para iniciar sesión en otro usuario --> 
 <!-- El comando echo para crear un archivo con texto --> 
 <!-- El comando rm sirve para eliminar archivos --> 
-1. Responde las siguientes preguntas:
+6. Responde las siguientes preguntas:
     1. ¿Qué efecto tiene el sticky bit en un directorio?
       - Su objetivo es que solo el usuario propietario pueda eliminar o renombrar un archivo o directorio.Sirve para evitar el borrado accidental de archivos o directorios.
     2. Si tienes habilitado el sticky bit, ¿cómo tendrías que hacer para   eliminar un fichero dentro del directorio?
