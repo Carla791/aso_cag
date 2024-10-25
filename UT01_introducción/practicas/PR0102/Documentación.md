@@ -38,3 +38,6 @@ end
 
 2. Se debe poder acceder desde equipo anfitrión a las máquinas virtuales mediante Escritorio remoto
   No puedo acceder a la maquina virtual por lo que no puedo instalar el acceso remoto
+
+
+[Volver al índice](../index.md)
