@@ -8,8 +8,8 @@
         - Windows 10
             2GB de RAM
             2 cores virtuales
-Realizamos el documento vagrantfile.
-<!--
+Realizamos el documento vagrantfile:
+
  Vagrant.configure("2") do |config|
   config.vm.define "wnd10" do |m1|
     m1.vm.box = "gusztavvargadr/windows-10"
@@ -30,13 +30,13 @@ Realizamos el documento vagrantfile.
     end
   end
 end
--->
 
-1. Las máquinas virtuales deberán estar interconectadas entre sí.
-   Cuando pongo `vagrant ssh server19` o `vagrant ssh wind10` no me funciona.
-   Entonces no puedo comprobar si estan interconectadas
 
-2. Se debe poder acceder desde equipo anfitrión a las máquinas virtuales mediante Escritorio remoto
+2. Las máquinas virtuales deberán estar interconectadas entre sí.
+   Cuando pongo `vagrant ssh server19` o `vagrant ssh wind10` no me funciona,
+   entonces no puedo comprobar si estan interconectadas, pero si deben de estarlo porque estan en la misma subred.
+
+3. Se debe poder acceder desde equipo anfitrión a las máquinas virtuales mediante Escritorio remoto
   No puedo acceder a la maquina virtual por lo que no puedo instalar el acceso remoto
 
 
