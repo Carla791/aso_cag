@@ -40,4 +40,4 @@ end
   No puedo acceder a la maquina virtual por lo que no puedo instalar el acceso remoto
 
 
-[Volver al índice](aso_cag/UT01_introduccion/practicas/index1.md)
+[Volver al índice](../index1.md)
