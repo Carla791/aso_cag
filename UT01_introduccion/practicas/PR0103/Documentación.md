@@ -62,5 +62,6 @@
 <!-- Nuestros datos se han actualizado en la página de github-->
   <!-- -->
   
-
+- [Captura](practicas/PR0103/Captura.png)
+- [VagrantFile](practicas/PR0103/Vagrantfile)
   [Volver al índice](../../index1.md)
