@@ -25,6 +25,7 @@ fi
 <!-- Utilizamos la funcion if y el comando test -r "archivo" para comprobar si el archivo existe y tiene permisos de lectura sino el archivo no existe o no tiene permisos de lectura-->
 ## Comparación de dos números
 3. Realiza un script que solicite dos números al usuario y los compare, mostrando cuál es mayor, o si son iguales.
+   
 ```bash
 #!/bin/bash
 read -p "Indica un numero: " num1
@@ -40,6 +41,7 @@ else
         echo "Los dos números son iguales"
 fi
 ```
+
 ## Validación de contraseña
 4. Escribe un script que solicite al usuario una contraseña y verifique si coincide con una contraseña predefinida (que estará almacenada en una variable de tu script). Si es correcta, muestra un mensaje de éxito, de lo contrario, indica que es incorrecta.
 ```bash
@@ -53,7 +55,6 @@ if [ $pwd == $predef ]; then
 else
     echo "Contraseña incorrecta"
 fi
-
 ``` 
 
 ## Comprobación de directorio
@@ -72,8 +73,8 @@ else
     mkdir $dir
     echo "El directorio no existía, pero ha sido creado"
 fi
-
 ```
+
 ## Verificar si el usuario es root
 6. Haz un script que verifique si el script está siendo ejecutado por el usuario root, mostrando un mensaje diferente si no lo es.
 ```bash
@@ -84,7 +85,6 @@ if [ $(whoami) = $usuario ]; then
 else
     echo "Este script está siendo ejecutado por el usuario root"
 fi
-
 ```
 
 ## Calificación de un examen
@@ -98,7 +98,6 @@ if [ $nota -ge 5 ]; then
 else
     echo "Suspenso"
 fi
-
 ```
 
 ## Comprobación del espacio en disco
@@ -137,6 +136,7 @@ fi
 
 ## Evaluación de edad
 10. Haz un script que solicite al usuario su edad y determine si es menor, adulto o mayor de edad, según un umbral predefinido (por ejemplo, menor de 18, entre 18 y 65, y mayor de 65).
+    
 ```bash
 #!/bin/bash
 read -p "Introduce tu edad: " edad
@@ -148,11 +148,10 @@ elif [ $edad -le 65 ]; then
 else
     echo "Eres de la tercera edad"
 fi
-
 ```  
+
 ## Contar líneas de un archivo
 11. Escribe un script que solicite el nombre de un archivo y luego imprima cuántas líneas tiene ese archivo. Verifica que el archivo exista antes de contar las líneas.
-
 ```bash
 #!/bin/bash
 read -p "Introduce el nombre del archivo: " archivo
