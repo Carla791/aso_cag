@@ -1,4 +1,4 @@
-# UT02: LENGUAJES DE SCRIPTING EN LINUX:BASH
+# UT03: Lenguajes de scripting en Linux: Bash
 ## Prácticas
 - [Practica 1](practicas/PR0301/Documentacion.md)
 - [Practica 2](practicas/PR0302/Documentacion.md)
