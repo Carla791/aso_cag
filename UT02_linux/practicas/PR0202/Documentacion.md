@@ -54,3 +54,4 @@
     - Agregar la clave privada a ssh `ssh-add C:\Users\Alumno\.ssh\id_ed25519`
     - Establecer conexión con github mediante ssh `ssh -T git@github.com`
 <!--La clave publica se guarda en "C:\Users\Alumno/.ssh/id_ed25519.pub" y la clave privada en "C:\Users\Alumno/.ssh/id_ed25519"-->
+[Volver al índice](../../index2.md)

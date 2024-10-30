@@ -192,3 +192,4 @@
       - Se podria borrar por el usuario root(sudo rm "directorio") o desde el usuario que creó el fichero.
 <!-- -->  
 <!-- -->  
+[Volver al índice](../../index2.md)
