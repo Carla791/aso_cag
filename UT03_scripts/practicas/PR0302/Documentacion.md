@@ -37,6 +37,7 @@ esac
 ## Identificación de extensión de archivo
 
 2. Haz un script que solicite al usuario un nombre de archivo y, usando case, determine si es un archivo de texto (.txt), un archivo comprimido (.zip o .tar.gz), o cualquier otro tipo de archivo.
+   
 ```bash
 #!/bin/bash
 read -p "Ingrese el nombre del archivo: " archivo
