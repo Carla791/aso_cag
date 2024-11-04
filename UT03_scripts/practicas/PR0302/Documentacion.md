@@ -124,14 +124,79 @@ esac
 ```bash
 #!bin/bash
 
+read -p "Introduce una calificación numérica (0-100): " calificacion
+
+case $calificacion in
+  9[0-9]|100)
+    echo "Sobresaliente"
+    ;;
+  7[0-9]|8[0-9])
+    echo "Notable"
+    ;;
+  5[0-9]|6[0-9])
+    echo "Aprobado"
+    ;;
+  *)
+    echo "Suspenso"
+    ;;
+esac
 ```   
 
 ## Clasificación de números
+
 7. Haz un script que solicite un número y lo clasifique como "Positivo", "Negativo" o "Cero".
-   
+
+```bash
+#!/bin/bash
+
+echo -p "Introduce un número: " numero
+
+if [ $numero -gt 0 ]; then
+    echo "Positivo"
+elif [ $numero -lt 0 ]; then
+    echo "Negativo"
+else
+    echo "Cero"
+fi
+```   
 
 ## Control de servicios en Linux
 8. Crea un script que pregunte por el nombre de un servicio y luego presente un menú para iniciar, detener o reiniciar un servicio en Linux (como apache2 o nginx). Usa case para gestionar las opciones y los comandos correspondientes (systemctl start, stop, restart).
 Después de realizar la operación solicitada comprueba su código de estado de finalización (recuerda que puedes obtener el estado de finalización de un comando con la variable $? tras ejecutarlo) y muestra un mensaje indicando si la operación se ha realizado correctamente o no.
 
+```bash
+#!/bin/bash
+read -p "Introduce el nombre del servicio (por ejemplo, apache2 o nginx): " servicio
 
+echo "Selecciona una opción:"
+echo "1. Iniciar el servicio"
+echo "2. Detener el servicio"
+echo "3. Reiniciar el servicio"
+read opcion
+
+case $opcion in
+  1)
+    sudo systemctl start $servicio
+    if [ $? -eq 0 ]; then
+      echo "El servicio $servicio se ha iniciado correctamente."
+    else
+      echo "Error al iniciar el servicio $servicio."
+    fi ;;
+  2)
+    sudo systemctl stop $servicio
+    if [ $? -eq 0 ]; then
+      echo "El servicio $servicio se ha detenido correctamente."
+    else
+      echo "Error al detener el servicio $servicio."
+    fi ;;
+  3)
+    sudo systemctl restart $servicio
+    if [ $? -eq 0 ]; then
+      echo "El servicio $servicio se ha reiniciado correctamente."
+    else
+      echo "Error al reiniciar el servicio $servicio."
+    fi ;;
+  *)
+    echo "Opción no válida.";;
+esac
+```
