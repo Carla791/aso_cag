@@ -117,14 +117,64 @@ echo "El factorial de $num es: $fact"
 10. Usa `until` para pedir al usuario que ingrese una contraseña correcta, y repite hasta que la acierte.
 
 ```bash
-
+#!/bin/bash
+correcta="1234"
+read -p "Indica la contraseña: " pwd
+until [ $pwd = $correcta ]
+do
+  read -p "Indica la contraseña: " pwd
+done
+echo "Contraseña correcta"
 ```
 
 ## Adivinar un número
 
+11. Crea un juego con while en el que el usuario intenta adivinar un número entre 1 y 10. Repite hasta que lo adivine.
+
+```bash
+#!/bin/bash
+n=3
+read -p "Adivina un número del 1 al 10: " num
+while  [ $num != $n ]
+do
+  read -p "Adivina un número del 1 al 10: " num
+done
+echo "Has adivinado el número"
+```
+
 ## Mostrar la fecha n veces
 
+12. Pide al usuario un número n y usa for para mostrar la fecha y hora actual n veces.
+
+```bash
+#!/bin/bash
+read -p "Indica un número: " num
+for ((i=0;i<$num;i++))
+do
+  date
+done
+```
+
 ## Promedio de números ingresados
+
+13. Usa while para pedir números al usuario hasta que ingrese "fin", luego muestra el promedio.
+    
+```bash
+#!/bin/bash
+
+read -p "Indica un número, o la palabra fin para terminar: " num
+while [ $num != "fin" ]
+do
+  read -p "Indica un número, o la palabra fin para terminar: " num
+  suma=$((suma + $num))
+  cont=$((cont++))
+done
+if [ $cont -ne 0 ] ; then
+   promedio=$(($suma / $cont))
+   echo "El promedio de los números es $promedio"
+fi
+
+```
 
 ## Contar palabras en una cadena
 
