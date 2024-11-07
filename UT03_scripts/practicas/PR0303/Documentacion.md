@@ -39,17 +39,6 @@ do
 done
 ```
 
-## Imprimir cada letra
-
-4. Pide una palabra al usuario y usa `for` para imprimir cada letra en una línea nueva.
-
-```bash
-#!/bin/bash
-read -p "Indica una palabra: " palabra
-for i in {}
-
-```
-
 ## Contar números pares del 1 al 20 con `while`
 
 5. Usa while para mostrar los números pares entre 1 y 20.
@@ -65,11 +54,6 @@ do
   n=$(( $n+1 ))
 done
 ```  
-
-## Suma de dígitos
-
-6. Pide un número al usuario y usa `while` para sumar todos sus dígitos. Por ejemplo, 123 debería devolver 6.
-
 
 ## Cuenta regresiva
 
@@ -161,32 +145,131 @@ done
     
 ```bash
 #!/bin/bash
-
+cont=0
+suma=0
+promedio=0
 read -p "Indica un número, o la palabra fin para terminar: " num
 while [ $num != "fin" ]
 do
+  suma=$(($suma + $num))
+  cont=$(($cont + 1))
   read -p "Indica un número, o la palabra fin para terminar: " num
-  suma=$((suma + $num))
-  cont=$((cont++))
 done
-if [ $cont -ne 0 ] ; then
+if [ $cont -ne 0 ]; then
    promedio=$(($suma / $cont))
    echo "El promedio de los números es $promedio"
 fi
-
 ```
 
 ## Contar palabras en una cadena
 
+14. Pide al usuario una frase y usa for para contar y mostrar el número de palabras en ella.
+
+```bash
+#!/bin/bash
+read -p "Escribe una frase: " frase
+
+for palabra in $frase
+do
+  cont=$((cont + 1))
+done
+echo "La frase $frase tiene $cont palabras"
+```
+
 ## Juego de adivinar con límites dinámicos
+
+15. Genera un número aleatorio entre 1 y 100 y pide al usuario que adivine. Usa while y da pistas de si el número es mayor o menor, terminando cuando acierte.
+
+```bash
+#!/bin/bash
+correcto=$((1+RANDOM%100))
+num=0
+while [ $num -ne $correcto ]
+do
+  read -p "Adivina un numero entre 1 y 100: " num
+  if [ $num -lt $correcto ]; then
+     echo "El numero correcto es mayor que $num"
+  elif [ $num -gt $correcto ]; then
+     echo "El numero correcto es menor que $num"
+  else
+     echo "El numero $num es correcto"
+  fi
+done
+```
 
 ## Archivo con nombres de directorios
 
+16. Usa for para listar todos los directorios en la ruta actual y escribe sus nombres en un archivo directorios.txt.
+
+```bash
+#!/bin/bash
+for dir in */; do
+  echo $dir >> directorios.txt
+done
+```
+
+```bash
+#!/bin/bash
+ruta=$(pwd)
+
+for f in *$ruta; do
+  if [ -d $f ]; then
+     echo $f >> directorios.txt
+  fi
+done
+```
+
+```bash
+#!/bin/bash
+ruta=$(pwd)
+
+for f in *$ruta; do
+  if [ -d $f ]; then
+     echo $f >> $1.txt
+  fi
+done
+```
+
+<!-- $1 es para que los que escribas al lado de ./script.sh lo use de variable-->
 ## Generar archivos de texto numerados
 
-## Conteo de vocales en una cadena
+17. Pide al usuario un número n y usa for para generar n archivos con nombres como archivo1.txt, archivo2.txt, etc.
+
+```bash
+#!/bin/bash
+read -p "Indica un número: " num
+for (( i=1; i<=$num; i++ ))
+do
+  touch archivo$i.txt
+done
+```
 
 ## Validación de entrada
 
+19. Usa until para pedir un número entre 1 y 10. Repite hasta que el usuario ingrese un número válido en ese rango.
+
+```bash
+#!/bin/bash
+num=0
+read -p "Introduce un número entre 1 y 10: " num
+until [ $num -ge 1 ] && [ $num -le 10 ]; do
+  read -p "Introduce un número entre 1 y 10: " num
+done
+echo "El numero $num es válido"
+```
+
 ## Script de copia de seguridad
 
+20. Crea un script que recorra un directorio y copie todos los archivos .txt a una carpeta backup. Usa for para la iteración y if para verificar el tipo de archivo.
+
+```bash
+#!/bin/bash
+ruta=$(pwd)
+
+for fichero in $ruta/*.txt
+do
+  if [ -f $fichero ]; then
+     cp $fichero backup/
+  fi
+done
+```
