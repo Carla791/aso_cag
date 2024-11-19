@@ -29,7 +29,6 @@
     - Crear el usuario con el comando `Sudo adduser cag_ssh` contraseña= 1234
 2. Realiza los pasos necesarios para que este usurio se pueda conectar mediante SSH mediante contraseña.
     - Instalamos el paquete ssh `sudo apt-get install openssh-server`
-    - Modificamos el archivo sshd_config con `sudo nano /etc/ssh/sshd_config` y añadimos la línea `#AllowUser cag_ssh`
     - Reseteamos el servicio con el comando `sudo /etc/init.d/ssh restart`
     - Nos conectamos mediante ssh `ssh cag_ssh@carlaserver`
 <!-- Utilizamos el comando cat para visualizar el fichero,y comprobar si esta modificado-->
