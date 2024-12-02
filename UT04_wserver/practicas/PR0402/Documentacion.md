@@ -65,36 +65,54 @@
 
     - `Get-Help Get-Member -Online`
 
-    ![alt](./img)
+    ![alt](./img/Ej%2010.png)
 
 11. Desde la línea de comandos, finaliza la ejecución de la herramienta **Recortes**.
 
+    - `Stop-Process -Name SnippingTool`
 
+    ![alt](./img/Ej%2011.png)
 
 12. Muestra todos los procesos que tienen el nombre `svchost`.
 
+    -`Get-Process -Name svchost`
 
+    ![alt](./img/Ej%2012.png)
 
 13. Muestra por pantalla el número de instancias del proceso `svchost`.
 
-
+    - `(Get-Process -Name svchost ).count`
+    
+    ![alt](./img/Ej%2013.png)
 
 14. Muestra por pantalla todos los procesos con el nombre `svchost` mostrando para cada uno: nombre, identificador, hora de inicio, tiempo total de procesador y clase de prioridad. Se deben mostrar de **forma tabular**.
 
-
+    - `Get-Process -Name svchost | Select-Object Name, Id, StartTime, CPU, PriorityClass | Format-Table -AutoSize `
+  
+    ![alt](./img/Ej%2014%20(1).png)
+    ![alt](./img/Ej%2014.png)
 
 15. Repite la búsqueda anterior, pero ordenando por el campo tiempo total de procesador en sentido descendente.
-
-
+    
+    - `Get-Process -Name svchost | Select-Object Name, Id, StartTime, CPU, PriorityClass | Sort-Object CPU -Descending | Format-Table -AutoSize`
+    
+    ![alt](./img/Ej%2015.png)
 
 16. Muestra los usuarios que hay en el sistema agrupándolos por la propiedad `Enabled`.
-
-
+    
+    - `Get-LocalUser | Group-Object -Property Enabled`
+  
+    ![alt](./img/Ej%2016.png)
 
 17. Muestra los usuarios que hay en el sistema con la cuenta habilitada (propiedad `Enabled` puesta a `True`). Utiliza el filtrado con el comando `Where-Object`
 
-
+    - `Get-LocalUser | Where-Object -FilterScript { $_.Enabled -eq "true" }`
+  
+    ![alt](./img/Ej%2017.png)
 
 18. Muestra un listado de todos los usuarios del sistema con el nombre y la fecha de la última vez que iniciaron sesión (tienes que buscar la propiedad que indique último inicio de sesión o *last logon*)
     
+    - `Get-LocalUser | Select-Object Name, LastLogon`
+
+    ![alt](./img/Ej%2018.png)
 
