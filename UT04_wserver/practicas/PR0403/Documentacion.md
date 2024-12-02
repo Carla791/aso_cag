@@ -58,13 +58,13 @@ En los siguientes ejercicios trabajaremos con los ficheros devueltos por el coma
 
     ![alt](./img/Ej%209.png)
 
-10.   Muestra todos los procesos que tienen el estado `Responding` puesto a `False`, es decir, todos los procesos del sistema que se hayan colgado.
+10. Muestra todos los procesos que tienen el estado `Responding` puesto a `False`, es decir, todos los procesos del sistema que se hayan colgado.
 
-    - ` Get-Process | Where-Object { $_.Responding -eq $false }`
+    - `Get-Process | Where-Object { $_.Responding -eq $false }`
 
     ![alt](./img/Ej%2010.png)
 
-11.  Muestra todos los ficheros de `C:\Windows` que hayan sido creados con fecha posterior al 15 de octubre de este año.
+11. Muestra todos los ficheros de `C:\Windows` que hayan sido creados con fecha posterior al 15 de octubre de este año.
     
     - `Get-ChildItem C:\Windows -File | Where-Object { $_.CreationTime -like "15/10/2024%" }`
 
