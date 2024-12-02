@@ -23,7 +23,7 @@
 
 4. Averigua para qué sirve el comando `Set-Content` y explícalo brevemente con tus palabras.
 
-- El comando `Set-Content` se utiliza para escribir contenido nuevo o reemplazar el contenido existente en un archivo. A diferencia de `Add-Content`, que agrega contenido al final del archivo, `Set-Content` sobrescribe el contenido existente.
+   - El comando `Set-Content` se utiliza para escribir contenido nuevo o reemplazar el contenido existente en un archivo. A diferencia de `Add-Content`, que agrega contenido al final del archivo, `Set-Content` sobrescribe el contenido existente.
 
 5. Explica tres formas diferentes de ver o buscar un comando que hayas utilizado anteriormente en tu sesión.
     - `Get-Command`
