@@ -67,5 +67,6 @@ En los siguientes ejercicios trabajaremos con los ficheros devueltos por el coma
 ### 11- Muestra todos los ficheros de `C:\Windows` que hayan sido creados con fecha posterior al 15 de octubre de este año.
     
 - `Get-ChildItem C:\Windows -File | Where-Object { $_.CreationTime -like "15/10/2024%" }`
+- `Get-ChildItem C:\Windows -File | Where-Object { $_.CreationTime -like "24/10/15"}`
 
 ![alt](./img/Ej%2011.png)

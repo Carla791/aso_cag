@@ -106,7 +106,10 @@
 
 17. Muestra los usuarios que hay en el sistema con la cuenta habilitada (propiedad `Enabled` puesta a `True`). Utiliza el filtrado con el comando `Where-Object`
 
-    - `Get-LocalUser | Where-Object -FilterScript { $_.Enabled -eq "true" }`
+    - `Get-LocalUser | Where-Object -FilterScript { $_.Enabled -eq $true
+    - 
+    - 
+    -  }`
   
     ![alt](./img/Ej%2017.png)
 
