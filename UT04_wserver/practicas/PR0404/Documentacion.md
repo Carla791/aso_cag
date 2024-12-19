@@ -60,11 +60,13 @@ Vamos a aprovechar la misma red que preparamos el otro día (`172.25.0.0/16`) pa
         Desde CAG-CORE-2016, ejecuto el comando `New-SelfSignedCertificate -DnsName "172.25.0.6" -CertStoreLocation Cert:\LocalMachine\My -KeyLength 2048`
         ![alt](./img/11.png)
     2. Configurar el Listener de WimRM para HTTPS
-        Desde CAG-2019, ejecuto el comando para eliminar el listener `Remove-Item -Path WSMan:\localhost\Listener\Listener* -Recurse`
-        Buscamos el hash del certificado con el comando 
+        - Desde CAG-2019, ejecuto el comando para eliminar el listener `Remove-Item -Path WSMan:\localhost\Listener\Listener* -Recurse`
+        - Buscamos el hash del certificado con el comando `Get-ChildItem -Path Cert:\LocalMachine\My`
 
-        Creamos un nuevo listener con el comando
-        Nos aseguramos de que el puerto 5986 ester abierto en el firewall
+        - Creamos un nuevo listener con el comando `New-Item -Path WSMan:\localhost\Listener- Transport HTTPS -Address * -CertificateThumPrint """"" `
+        - Nos aseguramos de que el puerto 5986 ester abierto en el firewall `netsh advfirewall firewall add rule name="WinRM HTTPS" protocol=TCP dir=in localport=5986 action=allow`
     3. Verifificar la configuración
+        - Comprobaremos que el listener se ha configurado correctamente con el comando `winrm enumerate winrm/config/Listener`
     4. Configurar el cliente para usar HTTPS
+        - Exportar el certificado con el comando `Export-Certificate -Cert Cert:\LocalMachine\My\hash -FilePath C:\.cer`
 
