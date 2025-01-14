@@ -21,7 +21,7 @@
 
 - Utilizando la herramienta *Servicios de archivos y de almacenamiento* del *Administrador del servidor*, crea una carpeta para cada usuario dentro de `C:\shares` y realiza los pasos necesarios para que ambos usuarios puedan ver esta carpeta como una unidad de red identificada con la letra `H:`
 
-    - Desde el Administrador del servidor>recursos compartidos>Nuevo recurso compartido>Recurso compartidoSMB-Avanzado>Nombre(personal)>
+    - Desde el Administrador del servidor>recursos compartidos>Nuevo recurso compartido>Recurso compartidoSMB-Avanzado>Nombre(Personal$)>
     - Desde el Administrador del servidor seguimos la siguiente ruta:Herramientas>Usuarios y equipos de Active Directory>Selecionamos los dos usuarios>Propiedades>Perfil>Seleccionamos Carpeta particular>Selecionamos Conectar H: a: \\CAG-2019\Personal\%username%>Aceptar
 
 
@@ -32,7 +32,10 @@
       - Crear un equipo en el servidor con el nombre del windows 10
       - Acceder al dominio con las credenciales de Administrador
       - Entramos en el dominio con un usuario(aperez)
-    - Al entrar comprobamos que solo podemos acceder a nuestra carpeta
+      - Al entrar comprobamos que podemos acceder a nuestra carpeta y a la del otro usuario
+      - Desde el servidor modificamos las propiedades de la carpeta personal$(desde recursos compartidos)
+      - En permisos desabilitamos la herencia>Convertit los permisos heredados en permisos explicitos en este objeto
+    - Ya no nos dejara entrar en la carpeta de fgonzalez 
 
 
 ## Carpetas compartidas por un grupo
