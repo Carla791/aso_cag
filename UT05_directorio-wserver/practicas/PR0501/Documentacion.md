@@ -26,10 +26,13 @@
 
 
 - Comprueba que la carpeta de cada usuario solo pueda ser accedida por él mismo.
-  
-    -Entramos en el dominio desde un equipo cliente y el nombre de usuario aperez comprobamos que solo tenemos acceso a nuestra carpeta y no a la de fgonzalez
 
-
+    - Para ello hemos de meter un Windows 10 dentro del dominio cag.local, siguiendo estos pasos:
+      - Comprobar que estan en la misma red y se hacen ping
+      - Crear un equipo en el servidor con el nombre del windows 10
+      - Acceder al dominio con las credenciales de Administrador
+      - Entramos en el dominio con un usuario(aperez)
+    - Al entrar comprobamos que solo podemos acceder a nuestra carpeta
 
 
 ## Carpetas compartidas por un grupo
