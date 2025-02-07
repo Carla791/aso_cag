@@ -57,33 +57,33 @@ Dominio Principal: micentro.local
 
 ### Justificación de la Estructura
 
-    1. Separación de Alumnos y Profesores:
+1. Separación de Alumnos y Profesores:
 
-        - Descripción: La creación de UOs separadas para alumnos y profesores permite una gestión clara y eficiente de los diferentes grupos de usuarios.
-        - Beneficios:
-            -Políticas de Seguridad Específicas: Se pueden aplicar políticas de seguridad adaptadas a las necesidades de cada grupo. Por ejemplo, los profesores pueden tener acceso a recursos y herramientas que no son necesarios para los alumnos, lo que mejora la seguridad general del sistema.
-            - Gestión de Permisos: Facilita la asignación y revocación de permisos de acceso a recursos, asegurando que cada grupo tenga acceso solo a lo que necesita.
+     - Descripción: La creación de UOs separadas para alumnos y profesores permite una gestión clara y eficiente de los diferentes grupos de usuarios.
+     - Beneficios:
+        - Políticas de Seguridad Específicas: Se pueden aplicar políticas de seguridad adaptadas a las necesidades de cada grupo. Por ejemplo, los profesores pueden tener acceso a recursos y herramientas que no son necesarios para los alumnos, lo que mejora la seguridad general del sistema.
+        - Gestión de Permisos: Facilita la asignación y revocación de permisos de acceso a recursos, asegurando que cada grupo tenga acceso solo a lo que necesita.
 
-    2. Organización por Ciclos Formativos:
+2. Organización por Ciclos Formativos:
 
-        -Descripción: La estructura organiza a los alumnos en UOs según su ciclo formativo (ASIR, SMR, DAM, DAW) y sus respectivos cursos (Primero y Segundo).
-        - Beneficios:
-            - Administración de Recursos: Permite gestionar recursos como aulas, equipos y materiales de manera más eficiente, asegurando que cada grupo tenga lo que necesita para su formación.
-            - Aplicación de Políticas Específicas: Facilita la implementación de políticas y procedimientos específicos para cada ciclo, como horarios, evaluaciones y actividades extracurriculares.
+    -Descripción: La estructura organiza a los alumnos en UOs según su ciclo formativo (ASIR, SMR, DAM, DAW) y sus respectivos cursos (Primero y Segundo).
+    - Beneficios:
+        - Administración de Recursos: Permite gestionar recursos como aulas, equipos y materiales de manera más eficiente, asegurando que cada grupo tenga lo que necesita para su formación.
+         - Aplicación de Políticas Específicas: Facilita la implementación de políticas y procedimientos específicos para cada ciclo, como horarios, evaluaciones y actividades extracurriculares.
 
-    3. Aulas como UOs:
+3. Aulas como UOs:
 
-        - Descripción: Cada curso tiene su propia aula, representada como una UO, lo que permite gestionar los recursos y equipos de forma independiente.
-        - Beneficios:
-            - Gestión Independiente de Recursos: Cada aula puede tener su propio conjunto de equipos y recursos, lo que permite un control más preciso sobre el uso y mantenimiento de los mismos.
-            - Flexibilidad en la Asignación de Clases: Facilita la asignación de clases y recursos a diferentes grupos de alumnos, optimizando el uso del espacio y los equipos disponibles.
+    - Descripción: Cada curso tiene su propia aula, representada como una UO, lo que permite gestionar los recursos y equipos de forma independiente.
+     - Beneficios:
+         - Gestión Independiente de Recursos: Cada aula puede tener su propio conjunto de equipos y recursos, lo que permite un control más preciso sobre el uso y mantenimiento de los mismos.
+        - Flexibilidad en la Asignación de Clases: Facilita la asignación de clases y recursos a diferentes grupos de alumnos, optimizando el uso del espacio y los equipos disponibles.
 
-    4. Grupo de Profesores:
+4. Grupo de Profesores:
 
-        - Descripción: La UO de Profesores agrupa a todos los docentes que imparten clases en los diferentes ciclos formativos.
-        - Beneficios:
-            - Centralización de la Gestión: Permite gestionar a todos los docentes de manera centralizada, facilitando la asignación de permisos y recursos.
-            - Facilitación de la Comunicación: Mejora la comunicación y colaboración entre los profesores, permitiendo una mejor coordinación en la planificación de clases y actividades.
+    - Descripción: La UO de Profesores agrupa a todos los docentes que imparten clases en los diferentes ciclos formativos.
+    - Beneficios:
+        - Centralización de la Gestión: Permite gestionar a todos los docentes de manera centralizada, facilitando la asignación de permisos y recursos.
+        - Facilitación de la Comunicación: Mejora la comunicación y colaboración entre los profesores, permitiendo una mejor coordinación en la planificación de clases y actividades.
 
 #### Conclusión
 
@@ -164,17 +164,17 @@ foreach ($alumno in $alumnos) {
 ```
 #### Justificación del scrip de automatización
 
-    - Razones Técnicas: La elección de PowerShell como herramienta para la automatización se basa en su integración nativa con Active Directory y su capacidad para manejar tareas administrativas de manera eficiente. Además, PowerShell permite la manipulación de ACLs (Listas de Control de Acceso) para gestionar permisos de carpetas de forma programática.
+- Razones Técnicas: La elección de PowerShell como herramienta para la automatización se basa en su integración nativa con Active Directory y su capacidad para manejar tareas administrativas de manera eficiente. Además, PowerShell permite la manipulación de ACLs (Listas de Control de Acceso) para gestionar permisos de carpetas de forma programática.
     
-    - Comparación con Alternativas: Otras alternativas, como la creación manual de usuarios y carpetas, serían mucho más propensas a errores y consumirían un tiempo considerable. La automatización no solo ahorra tiempo, sino que también reduce la posibilidad de errores, garantizando que todos los usuarios y carpetas se creen de manera consistente y conforme a las políticas establecidas.
+- Comparación con Alternativas: Otras alternativas, como la creación manual de usuarios y carpetas, serían mucho más propensas a errores y consumirían un tiempo considerable. La automatización no solo ahorra tiempo, sino que también reduce la posibilidad de errores, garantizando que todos los usuarios y carpetas se creen de manera consistente y conforme a las políticas establecidas.
 
 #### Justificación de la Estructura de Carpetas
 
-    - Carpetas Personales para Cada Alumno: Cada alumno tiene su propia carpeta personal, lo que permite un espacio privado para almacenar documentos y recursos.
+- Carpetas Personales para Cada Alumno: Cada alumno tiene su propia carpeta personal, lo que permite un espacio privado para almacenar documentos y recursos.
 
-    - Carpetas Compartidas por Grupo: Se crean carpetas compartidas para cada grupo, facilitando la colaboración y el intercambio de recursos entre los miembros del grupo.
+- Carpetas Compartidas por Grupo: Se crean carpetas compartidas para cada grupo, facilitando la colaboración y el intercambio de recursos entre los miembros del grupo.
 
-    - Control de Acceso: Al establecer permisos específicos, se asegura que solo los miembros del grupo tengan acceso a su carpeta compartida, protegiendo la información de otros grupos.
+- Control de Acceso: Al establecer permisos específicos, se asegura que solo los miembros del grupo tengan acceso a su carpeta compartida, protegiendo la información de otros grupos.
 
 ## Políticas de Directivas
 
